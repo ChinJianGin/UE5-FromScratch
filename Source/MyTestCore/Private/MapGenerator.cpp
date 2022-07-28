@@ -19,17 +19,17 @@ AMapGenerator::AMapGenerator(const FObjectInitializer& ObjectInitializer) : Supe
 
     _mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Map_2"));
     _mesh->SetWorldScale3D(FVector(.2f));
-    _mesh->SetWorldLocation(FVector(-_x, _y, 20.f));
+    _mesh->SetWorldLocation(FVector(_x, -_y, 20.f));
     Map.AddUnique(_mesh);
 
     _mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Map_3"));
     _mesh->SetWorldScale3D(FVector(.2f));
-    _mesh->SetWorldLocation(FVector(_x, -_y, 20.f));
+    _mesh->SetWorldLocation(FVector(-_x, -_y, 20.f));
     Map.AddUnique(_mesh);
     
     _mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Map_4"));
     _mesh->SetWorldScale3D(FVector(.2f));
-    _mesh->SetWorldLocation(FVector(-_x, -_y, 20.f));
+    _mesh->SetWorldLocation(FVector(-_x, _y, 20.f));
     Map.AddUnique(_mesh);
 }
 

@@ -19,6 +19,17 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Mesh")
+	USceneComponent* PlayerMesh;
+
+	void MoveUp();
+	void MoveDown();
+	void MoveLeft();
+	void MoveRight();
+
+	FVector CurrentPosition;
+	bool bVertical, bHorizontal;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
